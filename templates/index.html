@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask API - Books</title>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 300px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        pre {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 10px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask API - GET & POST Requests</h1>
+    
+    <h2>GET Books</h2>
+    <button onclick="getBooks()">Fetch Books</button>
+    <pre id="getResponse"></pre>
+    
+    <h2>POST Book</h2>
+    <form id="postForm">
+        <input type="text" id="id" placeholder="Book ID" required>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="date" id="pub_date" required>
+        <button type="submit">Add Book</button>
+    </form>
+    <pre id="postResponse"></pre>
+</body>
+</html>
