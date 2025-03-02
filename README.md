@@ -2,6 +2,10 @@
 
 This project is a simple Flask-based API that allows users to manage a collection of books via GET and POST requests. The frontend consists of an HTML page with a form for adding books and a button for fetching book data.
 
+### Images of Website
+![Fetch Books](https://imgur.com/mXMdfKm.png)
+
+![Post Books](https://imgur.com/WFLAnDE.png)
 ## Features
 - **GET Request**: Fetch all books stored in the API.
 - **POST Request**: Add a new book by providing its ID, title, author, and publication date.
